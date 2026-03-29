@@ -5,7 +5,7 @@ const app = express();
 const mongoose = require('mongoose');
 const logger = require('morgan');
 const petsRoutes = require('./controllers/pets.routes')
-
+const cors = require('cors')
 mongoose.connect(process.env.MONGODB_URI);
 
 mongoose.connection.on('connected', () => {
